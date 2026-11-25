@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.feedback-root {
+  font-family: 'DM Sans', sans-serif;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 4px;
+}
+
+.feedback-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f3460;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8eaf2;
+}
+
+/* ── Section Labels ── */
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  margin: 24px 0 12px;
+}
+
+/* ── Cards ── */
+.feedback-card {
+  background: #ffffff;
+  border: 1px solid #e8eaf2;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border-left: 4px solid #f59e0b;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 4px 20px rgba(15, 52, 96, 0.08);
+  transform: translateY(-1px);
+}
+
+.feedback-card.approved {
+  border-left-color: #10b981;
+  background: #f9fffe;
+}
+
+/* ── Card Top Row ── */
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.customer-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 0.2px;
+}
+
+/* ── Rating Badge ── */
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── Status Pills ── */
+.status-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.status-pending  { background: #fef3c7; color: #92400e; }
+.status-approved { background: #d1fae5; color: #065f46; }
+
+/* ── Service & Text ── */
+.service-tag {
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.suggestion-text {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+.feedback-date {
+  font-size: 11px;
+  color: #c0c4d0;
+  margin-bottom: 14px;
+}
+
+/* ── Divider ── */
+.card-divider {
+  border: none;
+  border-top: 1px solid #f0f2f8;
+  margin: 0 0 14px;
+}
+
+/* ── Action Row ── */
+.action-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.btn {
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.18s ease;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+}
+
+.btn-approve {
+  background: #0f3460;
+  color: #ffffff;
+  border-color: #0f3460;
+}
+
+.btn-approve:hover {
+  background: #1a4a7a;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: transparent;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+.btn-delete:hover {
+  background: #fff1f1;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* ── Messages ── */
+.error-msg {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 14px;
+  background: #fff1f1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #fca5a5;
+}
+
+.empty-msg {
+  font-size: 13px;
+  color: #c0c4d0;
+  padding: 16px 0;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .feedback-card {
+    padding: 14px 16px;
+    border-radius: 10px;
+  }
+
+  .customer-name { font-size: 14px; }
+  .suggestion-text { font-size: 13px; }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}

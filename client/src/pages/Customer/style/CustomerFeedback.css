@@ -1,0 +1,169 @@
+/* client/src/pages/Customer/style/CustomerFeedback.css */
+
+/* Fade animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.97); }
+}
+
+.feedback-container.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.feedback-container.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+/* Container */
+.feedback-container {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.feedback-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+/* Form */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.feedback-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #3a6ff7;
+  box-shadow: 0 0 0 3px rgba(58, 111, 247, 0.12);
+}
+
+.feedback-input:disabled,
+.feedback-textarea:disabled {
+  background: #f5f5f5;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.feedback-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ⭐ Star Rating */
+.star-rating {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.star-rating .star {
+  font-size: 36px;
+  cursor: pointer;
+  color: #d9d9d9;
+  transition: color 0.15s, transform 0.12s;
+  line-height: 1;
+  user-select: none;
+}
+
+.star-rating .star.active {
+  color: #f5a623;
+}
+
+.star-rating .star:hover {
+  color: #f5a623;
+  transform: scale(1.2);
+}
+
+/* Submit Button */
+.feedback-btn {
+  width: 100%;
+  padding: 13px;
+  background: #3a6ff7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.feedback-btn:hover {
+  background: #2f5de0;
+}
+
+.feedback-btn:active {
+  transform: scale(0.98);
+}
+
+.feedback-btn:disabled {
+  background: #a0b8f8;
+  cursor: not-allowed;
+}
+
+/* Message */
+.feedback-message {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.feedback-message.success {
+  color: #2e7d32;
+}
+
+.feedback-message.error {
+  color: #c62828;
+}
+
+@media (max-width: 540px) {
+  .feedback-container {
+    padding: 20px 16px;
+  }
+  .star-rating .star {
+    font-size: 28px;
+  }
+}

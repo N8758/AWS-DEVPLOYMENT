@@ -1,0 +1,26 @@
+# Dependencies
+**/node_modules/
+
+# Environment variables and secrets
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Build files
+**/build/
+**/dist/
+**/coverage/
+
+# Logs
+*.log
+
+# Archives
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Firebase service account credentials
+/server/firebase-service-account.json

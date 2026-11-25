@@ -1,0 +1,80 @@
+/* notification.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.notification-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 4px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.notification-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f3460;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8eaf2;
+}
+
+/* ── Empty state ── */
+.notification-container > p {
+  font-size: 13px;
+  color: #c0c4d0;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* ── Card ── */
+.notification-card {
+  background: #ffffff;
+  border: 1px solid #e8eaf2;
+  border-left: 4px solid #0f3460;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 20px rgba(15, 52, 96, 0.09);
+  transform: translateY(-1px);
+}
+
+.notification-card p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a1a2e;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.notification-card small {
+  font-size: 11px;
+  color: #c0c4d0;
+  font-weight: 400;
+}
+
+/* ── Error ── */
+.notification-error {
+  color: #dc2626;
+  background: #fff1f1;
+  border: 1px solid #fca5a5;
+  border-left: 4px solid #dc2626;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .notification-card {
+    padding: 13px 15px;
+    border-radius: 10px;
+  }
+
+  .notification-card p {
+    font-size: 13px;
+  }
+}
